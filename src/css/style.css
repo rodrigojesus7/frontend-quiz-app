@@ -1,4 +1,6 @@
 :root{
+
+    /* Mobile Text Presets */
     --preset-mobile-1-font-size: 8.8rem;
     --preset-mobile-1-font-weight: 500;
     --preset-mobile-1-line-height: 100%;
@@ -27,6 +29,42 @@
     --preset-mobile-5-letter-spacing: 0;
 
 
+    /* Tablet / Desktop Text Presets */
+    --preset-1-font-size: 14.4rem;
+    --preset-1-font-weight: 500;
+    --preset-1-line-height: 100%;
+    --preset-1-letter-spacing: 0;
+
+    --preset-2-font-size: 6.4rem;
+    --preset-2-font-weight-light: 300;
+    --preset-2-font-weight-medium: 500;
+    --preset-2-line-height: 100%;
+    --preset-2-letter-spacing: 0;
+
+    --preset-3-font-size: 3.6rem;
+    --preset-3-font-weight: 500;
+    --preset-3-line-height: 120%;
+    --preset-3-letter-spacing: 0;
+
+    --preset-4-font-size: 2.8rem;
+    --preset-4-font-weight: 500;
+    --preset-4-line-height: 100%;
+    --preset-4-letter-spacing: 0;
+
+    --preset-5-font-size: 2.4rem;
+    --preset-5-font-weight-regular: 400;
+    --preset-5-font-weight-medium: 500;
+    --preset-5-line-height: 150%;
+    --preset-5-letter-spacing: 0;
+    
+    --preset-6-font-size: 2rem;
+    --preset-6-font-weight: 400;
+    --preset-6-font-style: italic;
+    --preset-6-line-height: 150%;
+    --preset-6-letter-spacing: 0;
+
+    
+    /* Spacing Tokens */
     --spacing-100: 0.8rem;
     --spacing-200: 1.6rem;
     --spacing-300: 2.4rem;
@@ -38,6 +76,10 @@
     --spacing-1800: 14.4rem;
     --spacing-2300: 18.4rem;
 
+
+
 }
 
 
+.tex{
+}
