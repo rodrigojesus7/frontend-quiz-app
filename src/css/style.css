@@ -1,0 +1,43 @@
+:root{
+    --preset-mobile-1-font-size: 8.8rem;
+    --preset-mobile-1-font-weight: 500;
+    --preset-mobile-1-line-height: 100%;
+    --preset-mobile-1-letter-spacing: 0;
+
+    --preset-mobile-2-font-size: 4rem;
+    --preset-mobile-2-font-weight-light: 300;
+    --preset-mobile-2-font-weight-medium: 500;
+    --preset-mobile-2-line-height: 100%;
+    --preset-mobile-2-letter-spacing: 0;
+
+    --preset-mobile-3-font-size: 2rem;
+    --preset-mobile-3-font-weight: 500;
+    --preset-mobile-3-line-height: 120%;
+    --preset-mobile-3-letter-spacing: 0;
+
+    --preset-mobile-4-font-size: 1.8rem;
+    --preset-mobile-4-font-weight: 500;
+    --preset-mobile-4-line-height: 100%;
+    --preset-mobile-4-letter-spacing: 0;
+
+    --preset-mobile-5-font-size: 1.4rem;
+    --preset-mobile-5-font-weight: 400;
+    --preset-mobile-5-font-style: italic;
+    --preset-mobile-5-line-height: 150%;
+    --preset-mobile-5-letter-spacing: 0;
+
+
+    --spacing-100: 0.8rem;
+    --spacing-200: 1.6rem;
+    --spacing-300: 2.4rem;
+    --spacing-400: 3.2rem;
+    --spacing-500: 4rem;
+    --spacing-600: 4.8rem;
+    --spacing-800: 6.4rem;
+    --spacing-1600: 12.8rem;
+    --spacing-1800: 14.4rem;
+    --spacing-2300: 18.4rem;
+
+}
+
+
