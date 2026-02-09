@@ -82,7 +82,7 @@
 
     --toggle-theme-icons: #626C7F;
     --toggle-theme-background: #A729F5;
-    --toggle-theme-thumb: #A729F5;
+    --toggle-theme-thumb: #FFFFFF;
 
     --inicial-primary-text: #313E51;
     --inicial-secondary-text: #626C7F;
@@ -219,4 +219,42 @@ body{
 
 .header__toggleTheme{
     display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sliderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0.4rem;
+
+    background-color: var(--toggle-theme-background);
+    width: 3.2rem;
+    height: 2rem;
+
+    border-radius: 99.9rem;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.sliderContainer__slider{
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 100%;
+    background-color: var(--toggle-theme-thumb);
+}
+
+
+
+
+
+
+
+
+.hidden{
+    display: none;
 }
