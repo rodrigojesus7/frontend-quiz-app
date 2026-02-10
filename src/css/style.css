@@ -89,6 +89,7 @@
 
     --quizz-option-background-color: #FFFFFF;
     --quizz-option-title: #313E51;
+    --quizz-option-shadow: #8FA0C12E;
 
     --html-icon-background: #FFF5ED;
     --html-icon-color: #FF7E35;
@@ -111,7 +112,7 @@
     --alternative-container: #FFFFFF;
     --alternative-option-background: #F4F6FA;
     --alternative-option-text-color: #626C7F;
-    --alternative-option-answer-color: #313E51;     
+    --alternative-option-answer-color: #313E51;
 
     --selected-alternative-border-color: #A729F5;
     --selected-alternative-option-background: #A729F5;
@@ -139,7 +140,7 @@
 
     --dark-theme-inicial-primary-text: #FFFFFF;
     --dark-theme-inicial-secondary-text: #ABC1E1;
-    
+
     --dark-theme-toggle-theme-icons: #FFFFFF;
 
     --dark-theme-quizz-option-background-color: #3B4D66;
@@ -162,7 +163,7 @@
 }
 
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -176,31 +177,29 @@ body{
     font-family: Rubik, sans-serif;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
-
-    gap: 4.8rem;
-
-    padding: 1.6rem 2.4rem;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     width: 100%;
+
+    padding: 2.6rem 2.4rem;
 }
 
-.header__titleContainer{
+.header__titleContainer {
     display: flex;
     align-items: center;
 
     gap: 1.6rem;
 }
 
-.header__titleContainer__iconContainer{
+.header__titleContainer__iconContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,7 +217,7 @@ main{
     width: 2.857rem;
 }
 
-.header__titleContainer__text{
+.header__titleContainer__text {
     font-size: var(--preset-mobile-4-font-size);
     font-weight: var(--preset-mobile-4-font-weight);
     letter-spacing: var(--preset-mobile-4-letter-spacing);
@@ -227,13 +226,13 @@ main{
     color: var(--inicial-primary-text);
 }
 
-.header__toggleTheme{
+.header__toggleTheme {
     display: flex;
     align-items: center;
     gap: 0.8rem;
 }
 
-.sliderContainer{
+.sliderContainer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -251,14 +250,26 @@ main{
     transition: all 0.2s;
 }
 
-.sliderContainer__slider{
+.sliderContainer__slider {
     height: 1.2rem;
     width: 1.2rem;
     border-radius: 100%;
     background-color: var(--toggle-theme-thumb);
 }
 
-.startMenu__container{
+.startMenu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4rem;
+
+    max-width: 33.1rem;
+
+    padding: 3.2rem 2.4rem;
+
+}
+
+.startMenu__container {
     display: flex;
     flex-direction: column;
 
@@ -266,7 +277,7 @@ main{
 }
 
 
-.startMenu__title{
+.startMenu__title {
     font-size: var(--preset-mobile-2-font-size);
     font-weight: var(--preset-mobile-2-font-weight-light);
     letter-spacing: var(--preset-mobile-2-letter-spacing);
@@ -275,11 +286,11 @@ main{
     color: var(--inicial-primary-text);
 }
 
-.startMenu__title--highlight{
+.startMenu__title--highlight {
     font-weight: var(--preset-mobile-2-font-weight-medium);
 }
 
-.startMenu__text{
+.startMenu__text {
     font-size: var(--preset-mobile-5-font-size);
     font-weight: var(--preset-mobile-5-font-weight);
     letter-spacing: var(--preset-mobile-5-letter-spacing);
@@ -288,7 +299,68 @@ main{
     color: var(--inicial-secondary-text);
 }
 
+.startMenu__buttonsContainer {
+    display: flex;
+    flex-direction: column;
 
-.hidden{
+    gap: 1.6rem;
+}
+
+.startMenu__buttonsContainer__button {
+    display: flex;
+    align-items: center;
+
+    padding: 1.6rem;
+
+    gap: 1.6rem;
+
+    font-size: var(--preset-mobile-4-font-size);
+    font-weight: var(--preset-mobile-4-font-weight);
+    letter-spacing: var(--preset-mobile-4-letter-spacing);
+    line-height: var(--preset-mobile-4-line-height);
+
+    background-color: var(--quizz-option-background-color);
+    color: var(--quizz-option-title);
+
+    border: none;
+    border-radius: 1.2rem;
+
+    box-shadow: 0 1.6rem 4rem var(--quizz-option-shadow);
+
+    cursor: pointer;
+}
+
+.startMenu__buttonsContainer__button__iconContainer {
+    padding: 0.571rem;
+
+    border-radius: 0.6rem;
+
+    width: 4rem;
+    height: 4rem;
+}
+
+.startMenu__buttonsContainer__button__iconContainer svg{
+    width: 2.857rem;
+    height: 2.857rem;
+}
+
+.iconContainer--html{
+    background-color: var(--html-icon-background);
+}
+
+.iconContainer--css{
+    background-color: var(--css-icon-background);
+}
+
+.iconContainer--javascript{
+    background-color: var(--javascript-icon-background);
+}
+
+.iconContainer--accessibility{
+    background-color: var(--accessibility-icon-background);
+}
+
+
+.hidden {
     display: none;
 }
