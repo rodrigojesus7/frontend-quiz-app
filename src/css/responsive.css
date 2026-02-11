@@ -1,0 +1,76 @@
+@media (min-width: 48rem) {
+
+    .header {
+        padding: 4rem 6.4rem
+    }
+
+    .startMenu {
+        padding: 0 6.4rem;
+
+        gap: 6.4rem;
+    }
+
+    .startMenu__title {
+        font-size: var(--preset-2-font-size);
+        font-weight: var(--preset-2-font-weight-light);
+        letter-spacing: var(--preset-2-letter-spacing);
+        line-height: var(--preset-2-line-height);
+
+    }
+
+    .startMenu__title--highlight {
+        font-size: var(--preset-2-font-size);
+        font-weight: var(--preset-2-font-weight-medium);
+        letter-spacing: var(--preset-2-letter-spacing);
+        line-height: var(--preset-2-line-height);
+    }
+
+    .startMenu__text {
+        font-size: var(--preset-6-font-size);
+        font-weight: var(--preset-6-font-weight);
+        letter-spacing: var(--preset-6-letter-spacing);
+        line-height: var(--preset-6-line-height);
+        font-style: var(--preset-6-font-style);
+    }
+
+    .startMenu__buttonsContainer{
+        gap: 2.4rem;
+    }
+
+    .startMenu__buttonsContainer__button {
+        gap: 3.2rem;
+
+        font-size: var(--preset-4-font-size);
+        font-weight: var(--preset-4-font-weight);
+        letter-spacing: var(--preset-4-letter-spacing);
+        line-height: var(--preset-4-line-height);
+
+        border-radius: 2.4rem;
+    }
+
+    .startMenu__buttonsContainer__button__iconContainer {
+        padding: 0.8rem;
+    
+        border-radius: 1.2rem;
+    
+        width: 5.6rem;
+        height: 5.6rem;
+    }
+    
+    .startMenu__buttonsContainer__button__iconContainer svg {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .sliderContainer {
+        padding: 0.4rem;
+    
+        width: 4.8rem;
+        height: 2.8rem;
+    }
+
+    .sliderContainer__slider {
+        height: 2rem;
+        width: 2rem;
+    }
+}

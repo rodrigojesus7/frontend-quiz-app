@@ -51,7 +51,7 @@
     --preset-3-letter-spacing: 0;
 
     --preset-4-font-size: 2.8rem;
-    --preset-4-font-weight: 500;
+    --preset-4-font-weight: 550;
     --preset-4-line-height: 100%;
     --preset-4-letter-spacing: 0;
 
@@ -367,6 +367,7 @@ main {
     font-weight: var(--preset-mobile-5-font-weight);
     letter-spacing: var(--preset-mobile-5-letter-spacing);
     line-height: var(--preset-mobile-5-line-height);
+    font-style: var(--preset-mobile-5-font-style);
 
     color: var(--inicial-secondary-text);
 }
