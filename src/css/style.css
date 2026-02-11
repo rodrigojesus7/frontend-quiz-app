@@ -160,6 +160,7 @@
 
     --quizz-option-background-color: #3B4D66;
     --quizz-option-title: #FFFFFF;
+    --quizz-option-shadow: #313E512E;
 
     --question-index: #ABC1E1;
     --question: #FFFFFF;
@@ -303,8 +304,6 @@ main {
 
     gap: 4rem;
 
-    max-width: 33.1rem;
-
     padding: 3.2rem 2.4rem;
 
 }
@@ -316,6 +315,12 @@ main {
     gap: 1.6rem;
 }
 
+.startMenu__title--container{
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.8rem;
+}
 
 .startMenu__title {
     font-size: var(--preset-mobile-2-font-size);
@@ -327,7 +332,12 @@ main {
 }
 
 .startMenu__title--highlight {
+    font-size: var(--preset-mobile-2-font-size);
     font-weight: var(--preset-mobile-2-font-weight-medium);
+    letter-spacing: var(--preset-mobile-2-letter-spacing);
+    line-height: var(--preset-mobile-2-line-height);
+
+    color: var(--inicial-primary-text);
 }
 
 .startMenu__text {
