@@ -132,35 +132,38 @@
     --final-score-container-background-color: #FFFFFF;
     --final-score-color: #313E51;
     --final-score-index: #626C7F;
-
-
-    /* Dark Theme Colors */
-    --dark-theme-background-color: #313E51;
-    --dark-theme-main-text-color: #FFFFFF;
-
-    --dark-theme-inicial-primary-text: #FFFFFF;
-    --dark-theme-inicial-secondary-text: #ABC1E1;
-
-    --dark-theme-toggle-theme-icons: #FFFFFF;
-
-    --dark-theme-quizz-option-background-color: #3B4D66;
-    --dark-theme-quizz-option-title: #FFFFFF;
-
-    --dark-theme-question-index: #ABC1E1;
-    --dark-theme-question: #FFFFFF;
-
-    --dark-theme-range-background-color: #3B4D66;
-
-    --dark-theme-alternative-container: #3B4D66;
-    --dark-theme-alternative-option-background: #F4F6FA;
-    --dark-theme-alternative-option-text-color: #626C7F;
-    --dark-theme-alternative-option-answer-color: #FFFFFF;
-
-    --dark-theme-completed-quiz-text-color: #FFFFFF;
-    --dark-theme-final-score-container-background-color: #3B4D66;
-    --dark-theme-final-score-color: #FFFFFF;
-    --dark-theme-final-score-index: #ABC1E1;
 }
+
+
+/* Dark Theme Colors */
+[data-theme="dark"] {
+    --background-color: #313E51;
+    --main-text-color: #FFFFFF;
+
+    --inicial-primary-text: #FFFFFF;
+    --inicial-secondary-text: #ABC1E1;
+
+    --toggle-theme-icons: #FFFFFF;
+
+    --quizz-option-background-color: #3B4D66;
+    --quizz-option-title: #FFFFFF;
+
+    --question-index: #ABC1E1;
+    --question: #FFFFFF;
+
+    --range-background-color: #3B4D66;
+
+    --alternative-container: #3B4D66;
+    --alternative-option-background: #F4F6FA;
+    --alternative-option-text-color: #626C7F;
+    --alternative-option-answer-color: #FFFFFF;
+
+    --completed-quiz-text-color: #FFFFFF;
+    --final-score-container-background-color: #3B4D66;
+    --final-score-color: #FFFFFF;
+    --final-score-index: #ABC1E1;
+}
+
 
 
 body {
@@ -665,7 +668,7 @@ main {
     color: var(--final-score-index);
 }
 
-.scoreSection__scoreContainer__playAgainButton{
+.scoreSection__scoreContainer__playAgainButton {
     display: flex;
     align-items: center;
     justify-content: center;
