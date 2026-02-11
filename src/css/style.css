@@ -192,6 +192,21 @@ body {
     min-height: 100dvh;
 
     font-family: Rubik, sans-serif;
+
+    transition: background-color 0.4s ease;
+}
+
+.header,
+.startMenu,
+.startMenu__buttonsContainer__button,
+.quizzSection__buttonsContainer__button,
+.scoreSection,
+.quizzSection__buttonsContainer__submitButton {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 main {
@@ -288,18 +303,21 @@ main {
 
     cursor: pointer;
 
-    transition: all 0.2s;
+    transition: background-color 0.2s ease;
 }
 
-.sliderContainer--dark{
-    justify-content: flex-end;
-}
+
+.sliderContainer--dark .sliderContainer__slider {
+    transform: translateX(100%);
+  }
 
 .sliderContainer__slider {
     height: 1.2rem;
     width: 1.2rem;
     border-radius: 100%;
     background-color: var(--toggle-theme-thumb);
+
+    transition: transform 0.2s ease;
 }
 
 .startMenu {
