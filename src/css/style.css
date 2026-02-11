@@ -1,4 +1,9 @@
 :root {
+
+    --background-image-mobile: url('../images/pattern-background-mobile-light.svg');
+    --background-image-tablet: url('../images/pattern-background-tablet-light.svg');
+    --background-image-desktop: url('../images/pattern-background-desktop-light.svg');
+
     /* Mobile Text Presets */
     --preset-mobile-1-font-size: 8.8rem;
     --preset-mobile-1-font-weight: 500;
@@ -83,6 +88,8 @@
     --toggle-theme-icons: #626C7F;
     --toggle-theme-background: #A729F5;
     --toggle-theme-thumb: #FFFFFF;
+    --toggle-theme-sun: #626C7F;
+    --toggle-theme-moon: #626C7F;
 
     --inicial-primary-text: #313E51;
     --inicial-secondary-text: #626C7F;
@@ -137,6 +144,10 @@
 
 /* Dark Theme Colors */
 [data-theme="dark"] {
+    --background-image-mobile: url('../images/pattern-background-mobile-dark.svg');
+    --background-image-tablet: url('../images/pattern-background-tablet-dark.svg');
+    --background-image-desktop: url('../images/pattern-background-desktop-dark.svg');
+
     --background-color: #313E51;
     --main-text-color: #FFFFFF;
 
@@ -144,6 +155,8 @@
     --inicial-secondary-text: #ABC1E1;
 
     --toggle-theme-icons: #FFFFFF;
+    --toggle-theme-sun: #FFFFFF;
+    --toggle-theme-moon: #FFFFFF;
 
     --quizz-option-background-color: #3B4D66;
     --quizz-option-title: #FFFFFF;
@@ -171,7 +184,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
 
-    background: url('../images/pattern-background-mobile-light.svg') no-repeat;
+    background: var(--background-image-mobile) no-repeat;
     background-size: cover;
     background-color: var(--background-color);
 
@@ -248,10 +261,15 @@ main {
     display: flex;
     align-items: center;
 
-
-
     gap: 0.8rem;
+}
 
+.header__toggleTheme__sun {
+    fill: var(--toggle-theme-sun);
+}
+
+.header__toggleTheme__moon {
+    fill: var(--toggle-theme-moon);
 }
 
 .sliderContainer {
