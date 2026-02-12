@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./src/css/reset.css?v=1.0">
-    <link rel="stylesheet" href="./src/css/style.css?v=1.0">
-    <link rel="stylesheet" href="./src/css/responsive.css?v=1.0">
+    <link rel="stylesheet" href="./src/css/reset.css?v=1.1">
+    <link rel="stylesheet" href="./src/css/style.css?v=1.1">
+    <link rel="stylesheet" href="./src/css/responsive.css?v=1.1">
 
 </head>
 
@@ -25,7 +25,7 @@
 
         <header class="header">
 
-            <div class=" header__titleContainer">
+            <div class="invisible header__titleContainer">
                 <div class="header__titleContainer__iconContainer">
 
 
@@ -68,7 +68,7 @@
 
 
 
-        <section class="hidden startMenu">
+        <section class=" startMenu">
             <div class="startMenu__container">
                 <div class="startMenu__title--container">
                     <h1 class="startMenu__title">Welcome to the</h1>
@@ -79,7 +79,7 @@
             </div>
 
             <div class="startMenu__buttonsContainer">
-                <button class="startMenu__buttonsContainer__button">
+                <button class="startMenu__buttonsContainer__button htmlQuizz" id="htmlQuizz">
                     <div class="startMenu__buttonsContainer__button__iconContainer iconContainer--html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
                             <path fill="#FF7E35"
@@ -89,7 +89,7 @@
                     HTML
                 </button>
 
-                <button class="startMenu__buttonsContainer__button">
+                <button class="startMenu__buttonsContainer__button cssQuizz" id="cssQuizz">
                     <div class="startMenu__buttonsContainer__button__iconContainer iconContainer--css">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
                             <path fill="#2FD887"
@@ -99,7 +99,7 @@
                     CSS
                 </button>
 
-                <button class="startMenu__buttonsContainer__button">
+                <button class="startMenu__buttonsContainer__button javascriptQuizz" id="javascriptQuizz">
                     <div class="startMenu__buttonsContainer__button__iconContainer iconContainer--javascript">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
                             <path fill="#306AFF"
@@ -109,7 +109,7 @@
                     Javascript
                 </button>
 
-                <button class="startMenu__buttonsContainer__button">
+                <button class="startMenu__buttonsContainer__button accessibilityQuizz" id="accessibilityQuizz">
                     <div class="startMenu__buttonsContainer__button__iconContainer iconContainer--accessibility">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
                             <path fill="#A729F5"
@@ -192,12 +192,12 @@
 
 
 
-        <section class=" scoreSection">
+        <section class="hidden scoreSection">
 
             <div class="scoreSection__texts">
                 <h2 class="scoreSection__texts__primaryText">Quiz completed</h2>
                 <h3 class="scoreSection__texts__secondaryText">You scored...</h3>
-            </div>
+            </div>  
 
 
             <div class="scoreSection__scoreContainer">

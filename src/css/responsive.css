@@ -267,17 +267,16 @@
         align-items: center;
         background: var(--background-image-desktop) no-repeat;
         background-color: var(--background-color);
-        background-size: cover;
+        background-size: cover; 
     }
 
     .header {
-        padding: 8.3rem 0 8.5rem 0
+        padding: 8.3rem 0 8.5rem 0;
     }
 
     .startMenu {
         flex-direction: row;
 
-        padding: 0 14rem;
 
         gap: 12.8rem;
     }
