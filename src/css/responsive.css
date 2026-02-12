@@ -319,7 +319,10 @@
     }
 
     .quizzSection__questionSection {
+        justify-content: space-between;
+        
         width: 46.5rem;
+        height: 46.9rem;
 
         gap: 18.4rem;
     }
