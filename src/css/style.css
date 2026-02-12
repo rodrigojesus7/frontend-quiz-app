@@ -186,7 +186,6 @@ body {
     justify-content: flex-start;
 
     background: var(--background-image-mobile) no-repeat;
-    background-size: cover;
     background-color: var(--background-color);
 
     min-height: 100dvh;
