@@ -200,12 +200,13 @@ body {
 .startMenu__buttonsContainer__button,
 .quizzSection__buttonsContainer__button,
 .scoreSection,
-.quizzSection__buttonsContainer__submitButton {
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+.quizzSection__buttonsContainer__submitButton,
+.quizzSection__buttonsContainer__button__answerOption__container {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        border 0.1s ease;
 }
 
 main {
@@ -308,7 +309,7 @@ main {
 
 .sliderContainer--dark .sliderContainer__slider {
     transform: translateX(100%);
-  }
+}
 
 .sliderContainer__slider {
     height: 1.2rem;
@@ -336,7 +337,7 @@ main {
     gap: 1.6rem;
 }
 
-.startMenu__title--container{
+.startMenu__title--container {
     display: flex;
     flex-direction: column;
 
@@ -507,7 +508,6 @@ main {
 .quizzSection__buttonsContainer__button:hover,
 .quizzSection__buttonsContainer__button:focus {
     border: solid 0.3rem var(--selected-alternative-border-color);
-    margin: -0.3rem;
 }
 
 .quizzSection__buttonsContainer__button:hover .quizzSection__buttonsContainer__button__answerOption__container,
@@ -750,6 +750,6 @@ main {
     display: none;
 }
 
-.invisible{
+.invisible {
     opacity: 0;
 }
