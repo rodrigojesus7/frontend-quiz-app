@@ -579,12 +579,16 @@ main {
     line-height: var(--preset-mobile-4-line-height);
 
     color: var(--alternative-option-answer-color);
+
+    text-align: left;
 }
 
 .quizzSection__buttonsContainer__button__answerOption__container {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    flex-shrink: 0;
 
     background-color: var(--alternative-option-background);
     color: var(--alternative-option-text-color);
@@ -729,8 +733,6 @@ main {
 
     height: 4rem;
     width: 4rem;
-
-    background-color: var(--accessibility-icon-background);
 
     border-radius: 0.4rem;
 }
