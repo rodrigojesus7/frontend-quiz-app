@@ -176,6 +176,87 @@
         line-height: var(--preset-4-line-height);
     }
 
+
+
+
+    .scoreSection {
+        padding: 0.9rem 6.4rem 10rem 6.4rem;
+    }
+
+    .scoreSection__texts__primaryText {
+        font-size: var(--preset-2-font-size);
+        font-weight: var(--preset-2-font-weight-light);
+        letter-spacing: var(--preset-2-letter-spacing);
+        line-height: var(--preset-2-line-height);
+    }
+
+    .scoreSection__texts__secondaryText {
+        font-size: var(--preset-2-font-size);
+        font-weight: var(--preset-2-font-weight-medium);
+        letter-spacing: var(--preset-2-letter-spacing);
+        line-height: var(--preset-2-line-height);
+    }
+
+    .scoreSection__scoreContainer__scoreItems {
+        padding: 4.8rem;
+    }
+
+    .scoreSection__scoreContainer__scoreItems__quizzInfo {
+        gap: 2.4rem;
+    }
+
+    .scoreSection__scoreContainer__scoreItems__quizzInfo__iconContainer {
+        height: 5.6rem;
+        width: 5.6rem;
+
+        border-radius: 1rem;
+    }
+
+    .scoreSection__scoreContainer__scoreItems__quizzInfo__iconContainer svg {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .scoreSection__scoreContainer__scoreItems__quizzInfo__text {
+        font-size: var(--preset-4-font-size);
+        font-weight: var(--preset-4-font-weight);
+        letter-spacing: var(--preset-4-letter-spacing);
+        line-height: var(--preset-4-line-height);
+    }
+
+    .scoreSection__scoreContainer__scoreItems__finalScore {
+        font-size: var(--preset-1-font-size);
+        font-weight: var(--preset-1-font-weight);
+        letter-spacing: var(--preset-1-letter-spacing);
+        line-height: var(--preset-1-line-height);
+
+        margin-top: 2.4rem;
+    }
+
+
+    .scoreSection__scoreContainer__scoreItems__totalIndex {
+        font-size: var(--preset-5-font-size);
+        font-weight: var(--preset-5-font-weight-medium);
+        letter-spacing: var(--preset-5-letter-spacing);
+        line-height: var(--preset-5-line-height);
+    }
+
+    .scoreSection__scoreContainer {
+        gap: 3.2rem;
+    }
+
+    .scoreSection__scoreContainer__playAgainButton {
+        height: 9.2rem;
+    
+        padding: 3.2rem;
+
+        border-radius: 2.4rem;
+
+        font-size: var(--preset-4-font-size);
+        font-weight: var(--preset-4-font-weight);
+        letter-spacing: var(--preset-4-letter-spacing);
+        line-height: var(--preset-4-line-height);
+    }
 }
 
 
@@ -254,5 +335,17 @@
         margin-top: 1.6rem;
     }
 
+
+    .scoreSection {
+        flex-direction: row;
+
+        padding: 0.2rem 0;
+
+        gap: 14.4rem;
+    }
+
+    .scoreSection__scoreContainer__scoreItems{
+        width: 56.4rem;
+    }
 
 }

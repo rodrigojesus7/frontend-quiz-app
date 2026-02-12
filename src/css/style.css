@@ -664,7 +664,6 @@ main {
     line-height: var(--preset-mobile-2-line-height);
 
     color: var(--final-score-color);
-
 }
 
 
@@ -682,6 +681,8 @@ main {
     align-items: center;
 
     background-color: var(--final-score-container-background-color);
+
+    box-shadow: 0 1.6rem 4rem var(--quizz-option-shadow);
 
     padding: 3.2rem;
 
