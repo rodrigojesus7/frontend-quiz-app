@@ -194,7 +194,7 @@ body {
 
     transition: background-color 0.4s ease;
 
-    padding: 3.2rem 2.4rem;
+    padding: 0 2.4rem 3.2rem 2.4rem;
 }
 
 .header,
