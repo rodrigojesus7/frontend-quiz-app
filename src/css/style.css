@@ -508,6 +508,7 @@ main {
 .quizzSection__buttonsContainer__button:hover,
 .quizzSection__buttonsContainer__button:focus {
     border: solid 0.3rem var(--selected-alternative-border-color);
+    margin: -0.3rem;
 }
 
 .quizzSection__buttonsContainer__button:hover .quizzSection__buttonsContainer__button__answerOption__container,

@@ -228,23 +228,29 @@
         gap: 12.8rem;
     }
 
-    .quizzSection__questionSection{
+    .quizzSection__questionSection {
         width: 46.5rem;
 
         gap: 18.4rem;
     }
 
-    .quizzSection__buttonsContainer{
+    .quizzSection__buttonsContainer {
         width: 56.4rem;
 
         gap: 1.6rem;
     }
 
-    .quizzSection__buttonsContainer__button{
+    .quizzSection__buttonsContainer__button {
         height: 10.4rem;
     }
 
-    .quizzSection__buttonsContainer__submitButton{
+    .quizzSection__buttonsContainer__button:hover,
+    .quizzSection__buttonsContainer__button:focus {
+        border: solid 0.3rem var(--selected-alternative-border-color);
+        margin: 0;
+    }
+
+    .quizzSection__buttonsContainer__submitButton {
         margin-top: 1.6rem;
     }
 
