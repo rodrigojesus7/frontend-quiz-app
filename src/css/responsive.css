@@ -210,6 +210,11 @@
         gap: 2.4rem;
     }
 
+    .scoreSection__scoreContainer__scoreItems__quizzInfo__img{
+        width: 4rem;
+        height: 4rem;
+}
+
     .scoreSection__scoreContainer__scoreItems__quizzInfo__iconContainer {
         height: 5.6rem;
         width: 5.6rem;

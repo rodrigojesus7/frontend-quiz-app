@@ -726,6 +726,11 @@ main {
     gap: 1.6rem;
 }
 
+.scoreSection__scoreContainer__scoreItems__quizzInfo__img{
+        width: 2.857rem;
+        height: 2.857rem;
+}
+
 .scoreSection__scoreContainer__scoreItems__quizzInfo__iconContainer {
     display: flex;
     justify-content: center;
