@@ -452,6 +452,31 @@ main {
     gap: 2.4rem;
 }
 
+.quizzSection__questionSection__questionProgress{
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 100%;
+}
+
+.quizzSection__questionSection__questionProgress::-webkit-progress-bar{
+    background-color: var(--range-background-color);
+
+    height: 1.6rem;
+
+    padding: 0.4rem;
+
+    border-radius: 99.9rem;
+}
+
+.quizzSection__questionSection__questionProgress::-webkit-progress-value{
+    background-color: var(--range-progress-color);
+    
+    border-radius: 10.4rem;
+
+    height: 0.8rem;
+}
+
 
 .quizzSection__questionSection__questionContainer {
     display: flex;
