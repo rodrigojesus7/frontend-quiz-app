@@ -259,6 +259,11 @@ main {
     border-radius: 0.4rem;
 }
 
+.header__titleContainer__iconContainer__img{
+    width: 2.857rem;
+    height: 2.857rem;
+}
+
 .header__titleContainer__iconContainer--html{
     background-color: var(--html-icon-background);
 }
@@ -316,6 +321,8 @@ main {
     background-color: var(--toggle-theme-background);
     width: 3.2rem;
     height: 2rem;
+
+    border: none;
 
     border-radius: 99.9rem;
 
@@ -796,4 +803,5 @@ main {
 
 .invisible {
     opacity: 0;
+    pointer-events: none;
 }

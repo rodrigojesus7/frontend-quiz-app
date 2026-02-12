@@ -67,6 +67,11 @@
         height: 4rem;
     }
 
+    .header__titleContainer__iconContainer__img{
+        width: 4rem;
+        height: 4rem;
+    }
+
     .sliderContainer {
         padding: 0.4rem;
 
