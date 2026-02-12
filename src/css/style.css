@@ -482,7 +482,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    gap: 1.6REM;
+    gap: 1.6rem;
 }
 
 .quizzSection__buttonsContainer__button {

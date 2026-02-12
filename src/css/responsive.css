@@ -1,6 +1,6 @@
 @media (min-width: 48rem) {
 
-    body{
+    body {
         background: var(--background-image-tablet) no-repeat;
         background-color: var(--background-color);
     }
@@ -38,7 +38,7 @@
         font-style: var(--preset-6-font-style);
     }
 
-    .startMenu__buttonsContainer{
+    .startMenu__buttonsContainer {
         gap: 2.4rem;
     }
 
@@ -55,13 +55,13 @@
 
     .startMenu__buttonsContainer__button__iconContainer {
         padding: 0.8rem;
-    
+
         border-radius: 1.2rem;
-    
+
         width: 5.6rem;
         height: 5.6rem;
     }
-    
+
     .startMenu__buttonsContainer__button__iconContainer svg {
         width: 4rem;
         height: 4rem;
@@ -69,7 +69,7 @@
 
     .sliderContainer {
         padding: 0.4rem;
-    
+
         width: 4.8rem;
         height: 2.8rem;
     }
@@ -78,13 +78,111 @@
         height: 2rem;
         width: 2rem;
     }
+
+
+
+
+
+    .header__titleContainer__text {
+        font-size: var(--preset-4-font-size);
+        font-weight: var(--preset-4-font-weight);
+        letter-spacing: var(--preset-4-letter-spacing);
+        line-height: var(--preset-4-line-height);
+    }
+
+
+    .header__titleContainer__iconContainer {
+        height: 5.6rem;
+        width: 5.6rem;
+
+        border-radius: 1rem;
+    }
+
+    .header__titleContainer__iconContainer svg {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .quizzSection {
+        padding: 0.9rem 6.4rem 6rem 6.4rem;
+    }
+
+    .quizzSection__questionSection {
+        gap: 4rem;
+    }
+
+    .quizzSection__questionSection__questionContainer {
+        gap: 2.4rem;
+    }
+
+    .quizzSection__questionSection__questionIndex {
+        font-size: var(--preset-6-font-size);
+        font-weight: var(--preset-6-font-weight);
+        letter-spacing: var(--preset-6-letter-spacing);
+        line-height: var(--preset-6-line-height);
+        font-style: var(--preset-6-font-style);
+    }
+
+    .quizzSection__questionSection__question {
+        font-size: var(--preset-3-font-size);
+        font-weight: var(--preset-3-font-weight);
+        letter-spacing: var(--preset-mile-3-letter-spacing);
+        line-height: var(--preset-3-line-height);
+    }
+
+    .quizzSection__buttonsContainer {
+        gap: 2.4rem;
+    }
+
+    .quizzSection__buttonsContainer__button {
+        gap: 3.2rem;
+
+        border-radius: 2.4rem;
+    }
+
+    .quizzSection__buttonsContainer__button__answerOption__container {
+        width: 5.6rem;
+        height: 5.6rem;
+    
+        border-radius: 1.2rem;
+    }
+
+    .quizzSection__buttonsContainer__button__answerOption__option {
+        font-size: var(--preset-4-font-size);
+        font-weight: var(--preset-4-font-weight);
+        letter-spacing: var(--preset-4-letter-spacing);
+        line-height: var(--preset-4-line-height);
+    }
+
+    .quizzSection__buttonsContainer__button__answerText {
+        font-size: var(--preset-4-font-size);
+        font-weight: var(--preset-4-font-weight);
+        letter-spacing: var(--preset-4-letter-spacing);
+        line-height: var(--preset-4-line-height);
+    }
+
+    .quizzSection__buttonsContainer__submitButton {
+        height: 9.2rem;
+    
+        padding: 3.2rem;
+
+        margin-top: 0.8rem;
+
+        border-radius: 2.4rem;
+
+        font-size: var(--preset-4-font-size);
+        font-weight: var(--preset-4-font-weight);
+        letter-spacing: var(--preset-4-letter-spacing);
+        line-height: var(--preset-4-line-height);
+    }
+
 }
 
 
 
-@media (min-width: 90rem){
+@media (min-width: 90rem) {
 
-    body{
+    body {
         align-items: center;
         background: var(--background-image-desktop) no-repeat;
         background-color: var(--background-color);
@@ -92,10 +190,10 @@
     }
 
     .header {
-        padding: 4rem 14rem 10rem 14rem
+        padding: 9rem 14rem 10rem 14rem
     }
 
-    .startMenu{
+    .startMenu {
         flex-direction: row;
 
         padding: 0 14rem;
@@ -103,16 +201,16 @@
         gap: 12.8rem;
     }
 
-    .startMenu__container{
+    .startMenu__container {
         min-width: 46.5rem;
     }
 
-    .startMenu__buttonsContainer{
+    .startMenu__buttonsContainer {
         width: 56.4rem;
         gap: 1.6rem;
     }
 
-    .startMenu__buttonsContainer__button{
+    .startMenu__buttonsContainer__button {
         padding: 2.4rem;
 
     }
