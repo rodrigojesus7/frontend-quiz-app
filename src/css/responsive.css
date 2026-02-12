@@ -143,7 +143,7 @@
     .quizzSection__buttonsContainer__button__answerOption__container {
         width: 5.6rem;
         height: 5.6rem;
-    
+
         border-radius: 1.2rem;
     }
 
@@ -163,7 +163,7 @@
 
     .quizzSection__buttonsContainer__submitButton {
         height: 9.2rem;
-    
+
         padding: 3.2rem;
 
         margin-top: 0.8rem;
@@ -190,7 +190,7 @@
     }
 
     .header {
-        padding: 9rem 14rem 10rem 14rem
+        padding: 8.3rem 0 8.5rem 0
     }
 
     .startMenu {
@@ -214,4 +214,39 @@
         padding: 2.4rem;
 
     }
+
+
+
+
+    .quizzSection {
+        flex-direction: row;
+
+        width: 115.7rem;
+
+        padding: 0;
+
+        gap: 12.8rem;
+    }
+
+    .quizzSection__questionSection{
+        width: 46.5rem;
+
+        gap: 18.4rem;
+    }
+
+    .quizzSection__buttonsContainer{
+        width: 56.4rem;
+
+        gap: 1.6rem;
+    }
+
+    .quizzSection__buttonsContainer__button{
+        height: 10.4rem;
+    }
+
+    .quizzSection__buttonsContainer__submitButton{
+        margin-top: 1.6rem;
+    }
+
+
 }
