@@ -1,5 +1,6 @@
 const html = document.documentElement
 const themeToggleButton = document.querySelector('.sliderContainer')
+const savedTheme = localStorage.getItem('theme')
 
 const htmlQuizzButton = document.querySelector('#htmlQuizz')
 const cssQuizzButton = document.querySelector('#cssQuizz')
@@ -47,9 +48,11 @@ async function getData() {
     return data
 }
 
-getData()
 
-
+if (savedTheme === 'dark') {
+    html.setAttribute('data-theme', 'dark')
+    themeToggleButton.classList.add('sliderContainer--dark')
+}
 
 themeToggleButton.addEventListener('click', function () {
 
@@ -57,9 +60,13 @@ themeToggleButton.addEventListener('click', function () {
         html.removeAttribute('data-theme')
         themeToggleButton.classList.remove('sliderContainer--dark')
 
+        localStorage.setItem('theme', 'light')
+
     } else {
         html.setAttribute('data-theme', 'dark')
         themeToggleButton.classList.add('sliderContainer--dark')
+
+        localStorage.setItem('theme', 'dark')
     }
 
 })
