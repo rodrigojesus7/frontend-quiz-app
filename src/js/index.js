@@ -19,12 +19,22 @@ let headerSectionSvgIconContainer = document.querySelector('.header__titleContai
 let headerSectionSvgIcon = document.querySelector('.header__titleContainer__iconContainer__svgIcon')
 let headerSectionImg = document.querySelector('.header__titleContainer__iconContainer__img')
 
+let question = document.querySelector('.quizzSection__questionSection__question')
+let options = document.querySelector('.quizzOption')
+let questionIndex = document.querySelector('.quizzSection__questionSection__questionIndex__currentIndex')
+let progress = document.querySelector('.quizzSection__questionSection__questionProgress')
+
+let optionA = document.querySelector('.optionA')
+let optionB = document.querySelector('.optionB')
+let optionC = document.querySelector('.optionC')
+let optionD = document.querySelector('.optionD')
+
 async function getData() {
     const file = ('./data.json')
     const response = await fetch(file)
     const data = await response.json()
     console.log(data)
-    console.log(data.quizzes[0])
+    console.log(data.quizzes[0].questions[0])
 
     return data
 }
@@ -58,43 +68,88 @@ buttons.forEach(button => {
 
         getData().then(function (data) {
 
+            //HTML QUIZZ
             if (button.classList.contains('htmlQuizz')) {
 
                 headerSectionTitleText.textContent = `${data.quizzes[0].title}`
 
                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--html')
 
-                headerSectionImg.src = `${data.quizzes[0].icon}`
+                headerSectionImg.src = data.quizzes[0].icon
+
+                questionIndex.textContent = '1'
+                progress.value = 0
+
+                question.textContent = data.quizzes[0].questions[0].question
+
+                optionA.textContent = data.quizzes[0].questions[0].options[0]
+                optionB.textContent = data.quizzes[0].questions[0].options[1]
+                optionC.textContent = data.quizzes[0].questions[0].options[2]
+                optionD.textContent = data.quizzes[0].questions[0].options[3]
 
             }
 
+            //CSS QUIZZ
             else if (button.classList.contains('cssQuizz')) {
 
-                headerSectionTitleText.textContent = `${data.quizzes[1].title}`
+                headerSectionTitleText.textContent = data.quizzes[1].title
 
                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--css')
 
                 headerSectionImg.src = `${data.quizzes[1].icon}`
 
+                questionIndex.textContent = '1'
+                progress.value = 0
+
+                question.textContent = data.quizzes[1].questions[0].question
+
+                optionA.textContent = data.quizzes[1].questions[0].options[0]
+                optionB.textContent = data.quizzes[1].questions[0].options[1]
+                optionC.textContent = data.quizzes[1].questions[0].options[2]
+                optionD.textContent = data.quizzes[1].questions[0].options[3]
+
             }
 
+            // JAVASCRIPT QUIZZ
             else if (button.classList.contains('javascriptQuizz')) {
 
-                headerSectionTitleText.textContent = `${data.quizzes[2].title}`
+                headerSectionTitleText.textContent = data.quizzes[2].title
 
                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--javascript')
 
                 headerSectionImg.src = `${data.quizzes[2].icon}`
+                
+                questionIndex.textContent = '1'
+                progress.value = 0
+
+                question.textContent = data.quizzes[2].questions[0].question
+
+                optionA.textContent = data.quizzes[2].questions[0].options[0]
+                optionB.textContent = data.quizzes[2].questions[0].options[1]
+                optionC.textContent = data.quizzes[2].questions[0].options[2]
+                optionD.textContent = data.quizzes[2].questions[0].options[3]
 
             }
 
+            //ACCESSIBILITY QUIZZ
             else if (button.classList.contains('accessibilityQuizz')) {
 
-                headerSectionTitleText.textContent = `${data.quizzes[3].title}`
+                headerSectionTitleText.textContent = data.quizzes[3].title
 
                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--accessibility')
 
                 headerSectionImg.src = `${data.quizzes[3].icon}`
+
+                questionIndex.textContent = '1'
+                progress.value = 0
+
+                question.textContent = data.quizzes[3].questions[0].question
+
+                optionA.textContent = data.quizzes[3].questions[0].options[0]
+                optionB.textContent = data.quizzes[3].questions[0].options[1]
+                optionC.textContent = data.quizzes[3].questions[0].options[2]
+                optionD.textContent = data.quizzes[3].questions[0].options[3]
+
             }
 
 
