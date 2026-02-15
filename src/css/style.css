@@ -259,24 +259,24 @@ main {
     border-radius: 0.4rem;
 }
 
-.header__titleContainer__iconContainer__img{
+.header__titleContainer__iconContainer__img {
     width: 2.857rem;
     height: 2.857rem;
 }
 
-.header__titleContainer__iconContainer--html{
+.header__titleContainer__iconContainer--html {
     background-color: var(--html-icon-background);
 }
 
-.header__titleContainer__iconContainer--css{
+.header__titleContainer__iconContainer--css {
     background-color: var(--css-icon-background);
 }
 
-.header__titleContainer__iconContainer--javascript{
+.header__titleContainer__iconContainer--javascript {
     background-color: var(--javascript-icon-background);
 }
 
-.header__titleContainer__iconContainer--accessibility{
+.header__titleContainer__iconContainer--accessibility {
     background-color: var(--accessibility-icon-background);
 }
 
@@ -404,8 +404,13 @@ main {
 }
 
 input[type="radio"] {
-    display: none; 
-}     
+    display: none;
+}
+
+input[type="radio"]:checked .quizzSection__buttonsContainer__button {
+    background-color: var(--selected-alternative-border-color);
+    border-color: blue;
+}
 
 .startMenu__buttonsContainer__button {
     display: flex;
@@ -480,14 +485,14 @@ input[type="radio"] {
     gap: 2.4rem;
 }
 
-.quizzSection__questionSection__questionProgress{
+.quizzSection__questionSection__questionProgress {
     appearance: none;
     -webkit-appearance: none;
 
     width: 100%;
 }
 
-.quizzSection__questionSection__questionProgress::-webkit-progress-bar{
+.quizzSection__questionSection__questionProgress::-webkit-progress-bar {
     background-color: var(--range-background-color);
 
     height: 1.6rem;
@@ -497,9 +502,9 @@ input[type="radio"] {
     border-radius: 99.9rem;
 }
 
-.quizzSection__questionSection__questionProgress::-webkit-progress-value{
+.quizzSection__questionSection__questionProgress::-webkit-progress-value {
     background-color: var(--range-progress-color);
-    
+
     border-radius: 10.4rem;
 
     height: 0.8rem;
@@ -730,9 +735,9 @@ input[type="radio"] {
     gap: 1.6rem;
 }
 
-.scoreSection__scoreContainer__scoreItems__quizzInfo__img{
-        width: 2.857rem;
-        height: 2.857rem;
+.scoreSection__scoreContainer__scoreItems__quizzInfo__img {
+    width: 2.857rem;
+    height: 2.857rem;
 }
 
 .scoreSection__scoreContainer__scoreItems__quizzInfo__iconContainer {

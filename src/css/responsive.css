@@ -335,6 +335,7 @@
 
     .quizzSection__buttonsContainer__button {
         height: 10.4rem;
+        padding: 2.4rem;
     }
 
     .quizzSection__buttonsContainer__button:hover,
