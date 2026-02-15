@@ -80,8 +80,6 @@ themeToggleButton.addEventListener('click', function () {
 buttons.forEach(button => {
     button.addEventListener('click', function () {
 
-        questionSectionCounter = 0
-
         startMenu.classList.add('hidden');
         quizzSection.classList.remove('hidden');
 
@@ -89,208 +87,68 @@ buttons.forEach(button => {
 
         getData().then(function (data) {
 
-            //HTML QUIZZ
             if (button.classList.contains('htmlQuizz')) {
 
                 questionSectionCounter = 0
 
-                headerSectionTitleText.textContent = data.quizzes[questionSectionCounter].title
-
                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--html')
 
-                headerSectionImg.src = data.quizzes[questionSectionCounter].icon
-
                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--html')
-
-                scoreSectionIconImg.src = data.quizzes[questionSectionCounter].icon
-
-                scoreSectionTitle.textContent = data.quizzes[questionSectionCounter].title
-
-
-                questionIndex.textContent = '1'
-
-                // HTML - QUESTIONS
-                questionCounter = 0
-
-                question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
-
-                optionA.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[0]
-                optionB.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[1]
-                optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
-                optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
-
-                correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
-
-                submitButton.addEventListener('click', function () {
-
-                    if (questionCounter <= 8) {
-                        questionCounter++
-                    } else {
-                        quizzSection.classList.add('hidden')
-                        scoreSection.classList.remove('hidden')
-                    }
-
-                    question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
-
-                    optionA.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[0]
-                    optionB.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[1]
-                    optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
-                    optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
-
-
-                    correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
-                    questionIndex.textContent = questionCounter + 1
-                    progress.value = questionCounter + 1
-                })
-
-
-
-
-                answers.forEach(answer => {
-                    if (answer.textContent === correctAnswer) {
-                        answer.classList.add('CorrectAnswer')
-                    }
-                });
-
             }
 
-            //CSS QUIZZ
             else if (button.classList.contains('cssQuizz')) {
-
                 questionSectionCounter = 1
-
-                headerSectionTitleText.textContent = data.quizzes[questionSectionCounter].title
 
                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--css')
 
-                headerSectionImg.src = data.quizzes[questionSectionCounter].icon
-
                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--css')
-
-                scoreSectionIconImg.src = data.quizzes[questionSectionCounter].icon
-
-                scoreSectionTitle.textContent = data.quizzes[questionSectionCounter].title
-
-                questionIndex.textContent = '1'
-
-                // CSS - QUESTIONS
-                questionCounter = 0
-
-                question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
-
-                optionA.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[0]
-                optionB.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[1]
-                optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
-                optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
-
-                correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
-
-                submitButton.addEventListener('click', function () {
-
-                    if (questionCounter <= 8) {
-                        questionCounter++
-                    } else {
-                        quizzSection.classList.add('hidden')
-                        scoreSection.classList.remove('hidden')
-                    }
-
-                    question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
-
-                    optionA.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[0]
-                    optionB.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[1]
-                    optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
-                    optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
-
-
-                    correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
-                    questionIndex.textContent = questionCounter + 1
-                    progress.value = questionCounter + 1
-                })
-
-
             }
 
-
-
-
-
-            // JAVASCRIPT QUIZZ
             else if (button.classList.contains('javascriptQuizz')) {
-
                 questionSectionCounter = 2
-
-                headerSectionTitleText.textContent = data.quizzes[questionSectionCounter].title
 
                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--javascript')
 
-                headerSectionImg.src = data.quizzes[questionSectionCounter].icon
-
                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--javascript')
-
-                scoreSectionIconImg.src = data.quizzes[questionSectionCounter].icon
-
-                scoreSectionTitle.textContent = data.quizzes[questionSectionCounter].title
-
-                questionIndex.textContent = '1'
-
-                // JAVASCRIPT - QUESTIONS
-                questionCounter = 0
-
-                question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
-
-                optionA.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[0]
-                optionB.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[1]
-                optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
-                optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
-
-                correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
-
-                submitButton.addEventListener('click', function () {
-
-                    if (questionCounter <= 8) {
-                        questionCounter++
-                    } else {
-                        quizzSection.classList.add('hidden')
-                        scoreSection.classList.remove('hidden')
-                    }
-
-                    question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
-
-                    optionA.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[0]
-                    optionB.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[1]
-                    optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
-                    optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
-
-
-                    correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
-                    questionIndex.textContent = questionCounter + 1
-                    progress.value = questionCounter + 1
-                })
             }
 
-
-
-            //ACCESSIBILITY QUIZZ
             else if (button.classList.contains('accessibilityQuizz')) {
-
                 questionSectionCounter = 3
-
-                headerSectionTitleText.textContent = data.quizzes[questionSectionCounter].title
 
                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--accessibility')
 
-                headerSectionImg.src = data.quizzes[questionSectionCounter].icon
-
                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--accessibility')
+            }
 
-                scoreSectionIconImg.src = data.quizzes[questionSectionCounter].icon
+            headerSectionTitleText.textContent = data.quizzes[questionSectionCounter].title
 
-                scoreSectionTitle.textContent = data.quizzes[questionSectionCounter].title
+            headerSectionImg.src = data.quizzes[questionSectionCounter].icon
 
-                questionIndex.textContent = '1'
+            scoreSectionIconImg.src = data.quizzes[questionSectionCounter].icon
 
-                // ACCESSIBILITY - QUESTIONS
-                questionCounter = 0
+            scoreSectionTitle.textContent = data.quizzes[questionSectionCounter].title
+
+            questionIndex.textContent = '1'
+
+            questionCounter = 0
+
+            question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
+
+            optionA.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[0]
+            optionB.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[1]
+            optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
+            optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
+
+            correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
+
+            submitButton.addEventListener('click', function () {
+
+                if (questionCounter <= 8) {
+                    questionCounter++
+                } else {
+                    quizzSection.classList.add('hidden')
+                    scoreSection.classList.remove('hidden')
+                }
 
                 question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
 
@@ -299,33 +157,20 @@ buttons.forEach(button => {
                 optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
                 optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
 
+
                 correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
-
-                submitButton.addEventListener('click', function () {
-
-                    if (questionCounter <= 8) {
-                        questionCounter++
-                    } else {
-                        quizzSection.classList.add('hidden')
-                        scoreSection.classList.remove('hidden')
-                    }
-
-                    question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
-
-                    optionA.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[0]
-                    optionB.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[1]
-                    optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
-                    optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
+                questionIndex.textContent = questionCounter + 1
+                progress.value = questionCounter + 1
+            })
 
 
-                    correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
-                    questionIndex.textContent = questionCounter + 1
-                    progress.value = questionCounter + 1
-                })
 
 
-            }
-
+            answers.forEach(answer => {
+                if (answer.textContent === correctAnswer) {
+                    answer.classList.add('CorrectAnswer')
+                }
+            });
 
         })
 
