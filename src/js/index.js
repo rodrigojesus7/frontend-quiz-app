@@ -273,7 +273,7 @@ buttons.forEach(button => {
             //ACCESSIBILITY QUIZZ
             else if (button.classList.contains('accessibilityQuizz')) {
 
-                questionCounter = 3
+                questionSectionCounter = 3
 
                 headerSectionTitleText.textContent = data.quizzes[questionSectionCounter].title
 
