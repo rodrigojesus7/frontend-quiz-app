@@ -403,6 +403,10 @@ main {
     gap: 1.6rem;
 }
 
+input[type="radio"] {
+    display: none; 
+}     
+
 .startMenu__buttonsContainer__button {
     display: flex;
     align-items: center;
