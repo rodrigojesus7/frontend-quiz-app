@@ -49,6 +49,10 @@ let questionSectionCounter = 0
 let questionCounter = 0
 let correctAnswer = ''
 let selectedAnswerIndex = null
+let isAnswerSubmitted = false
+
+let score = 0
+let finalScore = document.querySelector('.scoreSection__scoreContainer__scoreItems__finalScore')
 
 
 async function getData() {
@@ -149,6 +153,7 @@ buttons.forEach((button, index) => {
 
 
 
+
 function loadQuestions() {
 
     const currentQuestion = data.quizzes[questionSectionCounter].questions[questionCounter]
@@ -177,179 +182,81 @@ function loadQuestions() {
 
 submitButton.addEventListener('click', function () {
 
-    if (selectedAnswerIndex === null) {
+    if (!isAnswerSubmitted) {
+
+        if (selectedAnswerIndex === null) {
+            return
+        }
+
+        if (selectedAnswerIndex !== correctAnswerIndex) {
+            showIncorrectAnswer()
+        } else {
+            showCorrectAnswer()
+            score++
+        }
+
+        submitButton.textContent = 'Next question'
+        isAnswerSubmitted = true
         return
     }
 
-    if (questionCounter < 9) {
+    goToNextQuestion()
 
-        questionCounter++
+})
 
-        selectedAnswerIndex = null
+function showIncorrectAnswer() {
+    options[selectedAnswerIndex].classList.add('quizzSection__buttonsContainer__button--wrongAnswer')
+    optionsContainer[selectedAnswerIndex].classList.add('quizzSection__buttonsContainer__button__answerOption__container--wrongAnswer')
 
+    incorrectIcons[selectedAnswerIndex].classList.remove('hidden')
+    correctIcons[correctAnswerIndex].classList.remove('hidden')
+}
+
+function showCorrectAnswer(){
+    options[correctAnswerIndex].classList.add('correctAnswer')
+    correctIcons[correctAnswerIndex].classList.remove('hidden')
+}
+
+function goToNextQuestion() {
+
+    clearAnswers()
+
+    questionCounter++
+    selectedAnswerIndex = null
+    isAnswerSubmitted = false
+    submitButton.textContent = 'Submit Answer'
+
+    if (questionCounter < data.quizzes[questionSectionCounter].questions.length) {
         loadQuestions()
     } else {
         quizzSection.classList.add('hidden')
         scoreSection.classList.remove('hidden')
+
+        finalScore.textContent = score
     }
+}
 
-})
 
+function clearAnswers() {
+    options.forEach(option => {
+        option.classList.remove('quizzSection__buttonsContainer__button--wrongAnswer')
+        option.classList.remove('correctAnswer')
+    })
 
+    optionsContainer.forEach(container => {
+        container.classList.remove('quizzSection__buttonsContainer__button__answerOption__container--wrongAnswer')
+        container.classList.remove('correctAnswerContainer')
+    })
 
+    incorrectIcons.forEach(icon => {
+        icon.classList.add('hidden')
+    })
 
+    correctIcons.forEach(icon => {
+        icon.classList.add('hidden')
+    })
 
-
-
-
-// buttons.forEach(button => {
-//     button.addEventListener('click', function () {
-
-//         startMenu.classList.add('hidden');
-//         quizzSection.classList.remove('hidden');
-
-//         headerSectionTitle.classList.remove('invisible')
-
-//         getData().then(function (data) {
-
-//             if (button.classList.contains('htmlQuizz')) {
-
-//                 questionSectionCounter = 0
-
-//                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--html')
-
-//                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--html')
-//             }
-
-//             else if (button.classList.contains('cssQuizz')) {
-//                 questionSectionCounter = 1
-
-//                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--css')
-
-//                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--css')
-//             }
-
-//             else if (button.classList.contains('javascriptQuizz')) {
-//                 questionSectionCounter = 2
-
-//                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--javascript')
-
-//                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--javascript')
-//             }
-
-//             else if (button.classList.contains('accessibilityQuizz')) {
-//                 questionSectionCounter = 3
-
-//                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--accessibility')
-
-//                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--accessibility')
-//             }
-
-//             console.log(selectedAnswerIndex)
-
-//             headerSectionTitleText.textContent = data.quizzes[questionSectionCounter].title
-
-//             headerSectionImg.src = data.quizzes[questionSectionCounter].icon
-
-//             scoreSectionIconImg.src = data.quizzes[questionSectionCounter].icon
-
-//             scoreSectionTitle.textContent = data.quizzes[questionSectionCounter].title
-
-//             questionIndex.textContent = '1'
-
-//             questionCounter = 0
-
-//             question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
-
-//             optionA.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[0]
-//             optionB.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[1]
-//             optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
-//             optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
-
-//             correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
-
-//             answers.forEach((answer, answerIndex) => {
-//                 if (answer.textContent === correctAnswer) {
-//                     console.log(`a alternativa correta é a ${answerIndex + 1}, ${correctAnswer}`)
-//                     correctAnswerIndex = answerIndex
-//                 }
-//             });
-
-//             submitButton.addEventListener('click', function () {
-
-//                 if (questionCounter <= 8) {
-//                     questionCounter++
-//                     console.log(questionCounter)
-//                 } else {
-//                     quizzSection.classList.add('hidden')
-//                     scoreSection.classList.remove('hidden')
-//                 }
-
-//                 // options[correctAnswerIndex].classList.add('correctAnswer')
-
-//                 // correctIcons[correctAnswerIndex].classList.remove('hidden')
-
-//                 // optionsContainer[correctAnswerIndex].classList.add('correctAnswerContainer')
-
-
-
-//                 // for (let option of options) {
-//                 //     option.classList.remove('quizzSection__buttonsContainer__button--wrongAnswer')
-//                 // }
-
-//                 // for (let containers of optionsContainer) {
-//                 //     containers.classList.remove('quizzSection__buttonsContainer__button__answerOption__container--wrongAnswer')
-//                 // }
-
-//                 // for (let containers of optionsContainer) {
-//                 //     containers.classList.remove('correctAnswerContainer')
-//                 // }
-
-//                 // for (let option of options) {
-//                 //     option.classList.remove('correctAnswer')
-//                 // }
-
-//                 // for (let icons of incorrectIcons) {
-//                 //     icons.classList.add('hidden')
-//                 // }
-
-//                 // for (let icons of correctIcons) {
-//                 //     icons.classList.add('hidden')
-//                 // }
-
-//                 question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
-
-//                 optionA.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[0]
-//                 optionB.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[1]
-//                 optionC.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[2]
-//                 optionD.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].options[3]
-
-
-//                 correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
-//                 questionIndex.textContent = questionCounter + 1
-//                 progress.value = questionCounter + 1
-
-
-
-//                 console.log(selectedAnswerIndex)
-
-
-
-
-//                 answers.forEach((answer, answerIndex) => {
-//                     if (answer.textContent === correctAnswer) {
-//                         console.log(`a alternativa correta é a ${answerIndex + 1}, ${correctAnswer}`)
-//                         correctAnswerIndex = answerIndex
-//                     }
-//                 });
-
-//             })
-
-
-//         })
-
-//     })
-// })
+}
 
 
 

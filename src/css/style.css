@@ -832,7 +832,7 @@ input[type="radio"] {
 
 
 
-.quizzSection__buttonsContainer__button--selected{
+.quizzSection__buttonsContainer__button--selected {
     border: solid 0.3rem var(--selected-alternative-border-color);
 }
 
@@ -841,7 +841,7 @@ input[type="radio"] {
     color: white;
 }
 
-.correctAnswer{
+.correctAnswer {
     border: solid 0.3rem var(--right-answer-color);
 }
 
