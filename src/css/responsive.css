@@ -267,6 +267,11 @@
         letter-spacing: var(--preset-4-letter-spacing);
         line-height: var(--preset-4-line-height);
     }
+
+    .incorrectIcon, .correctIcon{
+        width: 4rem;
+        height: 4rem;
+    }
 }
 
 
@@ -360,5 +365,6 @@
     .scoreSection__scoreContainer__scoreItems {
         width: 56.4rem;
     }
+
 
 }

@@ -44,9 +44,9 @@
 
 
 
-                    <button class="sliderContainer" aria-label="Toggle dark mode" aria-pressed="false">
-                        <div class="sliderContainer__slider"></div>
-                    </button>
+                <button class="sliderContainer" aria-label="Toggle dark mode" aria-pressed="false">
+                    <div class="sliderContainer__slider"></div>
+                </button>
 
 
 
@@ -59,7 +59,7 @@
 
 
 
-        
+
 
 
 
@@ -135,48 +135,89 @@
                         minimum WCAG 2.1 Level AA requirement for normal text?</h2>
                 </div>
 
-                <progress class="quizzSection__questionSection__questionProgress" value="1" max="10" aria-label="Quiz progress"></progress>
+                <progress class="quizzSection__questionSection__questionProgress" value="1" max="10"
+                    aria-label="Quiz progress"></progress>
             </div>
 
             <div class="quizzSection__buttonsContainer">
                 <button class="quizzSection__buttonsContainer__button">
-                    <input type="radio" name="option" id="optionA" class="input" data-in>
                     <div class="quizzSection__buttonsContainer__button__answerOption__container">
                         <p class="quizzSection__buttonsContainer__button__answerOption__option">A</p>
                     </div>
-                    <p class="quizzSection__buttonsContainer__button__answerText quizzOption optionA">4.5 : 1</p>
-                    <svg class="incorrectIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="#EE5454" d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-5.402 7.415.142-.175a1.25 1.25 0 0 1 1.595-.143l.175.143L20 18.233l3.49-3.493a1.25 1.25 0 0 1 1.595-.143l.175.143a1.25 1.25 0 0 1 .142 1.595l-.142.175L21.767 20l3.493 3.49a1.25 1.25 0 0 1 .142 1.595l-.142.175a1.25 1.25 0 0 1-1.595.142l-.175-.142L20 21.767l-3.49 3.493a1.25 1.25 0 0 1-1.595.142l-.175-.142a1.25 1.25 0 0 1-.143-1.595l.143-.175L18.233 20l-3.493-3.49a1.25 1.25 0 0 1-.143-1.595Z"/></svg>
-                    <svg class="correctIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="#26D782" d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-1.875 15.105L25.3 15.41a1.25 1.25 0 0 1 1.915 1.593l-.145.174-8.06 8.08a1.25 1.25 0 0 1-1.595.148l-.175-.145-4.375-4.375a1.25 1.25 0 0 1 1.595-1.913l.175.143 3.49 3.49Z"/></svg>
+                    <div class="answerAndIconsContainer">
+                        <p class="quizzSection__buttonsContainer__button__answerText quizzOption optionA">4.5 : 1</p>
+                        <svg class="incorrectIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            fill="none" viewBox="0 0 40 40">
+                            <path fill="#EE5454"
+                                d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-5.402 7.415.142-.175a1.25 1.25 0 0 1 1.595-.143l.175.143L20 18.233l3.49-3.493a1.25 1.25 0 0 1 1.595-.143l.175.143a1.25 1.25 0 0 1 .142 1.595l-.142.175L21.767 20l3.493 3.49a1.25 1.25 0 0 1 .142 1.595l-.142.175a1.25 1.25 0 0 1-1.595.142l-.175-.142L20 21.767l-3.49 3.493a1.25 1.25 0 0 1-1.595.142l-.175-.142a1.25 1.25 0 0 1-.143-1.595l.143-.175L18.233 20l-3.493-3.49a1.25 1.25 0 0 1-.143-1.595Z" />
+                        </svg>
+                        <svg class="correctIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            fill="none" viewBox="0 0 40 40">
+                            <path fill="#26D782"
+                                d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-1.875 15.105L25.3 15.41a1.25 1.25 0 0 1 1.915 1.593l-.145.174-8.06 8.08a1.25 1.25 0 0 1-1.595.148l-.175-.145-4.375-4.375a1.25 1.25 0 0 1 1.595-1.913l.175.143 3.49 3.49Z" />
+                        </svg>
+                    </div>
+
                 </button>
 
                 <button class="quizzSection__buttonsContainer__button">
-                    <input type="radio" name="option" id="optionB" class="input">
                     <div class="quizzSection__buttonsContainer__button__answerOption__container">
                         <p class="quizzSection__buttonsContainer__button__answerOption__option">B</p>
                     </div>
-                    <p class="quizzSection__buttonsContainer__button__answerText quizzOption optionB">3 : 1</p>
-                    <svg class="incorrectIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="#EE5454" d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-5.402 7.415.142-.175a1.25 1.25 0 0 1 1.595-.143l.175.143L20 18.233l3.49-3.493a1.25 1.25 0 0 1 1.595-.143l.175.143a1.25 1.25 0 0 1 .142 1.595l-.142.175L21.767 20l3.493 3.49a1.25 1.25 0 0 1 .142 1.595l-.142.175a1.25 1.25 0 0 1-1.595.142l-.175-.142L20 21.767l-3.49 3.493a1.25 1.25 0 0 1-1.595.142l-.175-.142a1.25 1.25 0 0 1-.143-1.595l.143-.175L18.233 20l-3.493-3.49a1.25 1.25 0 0 1-.143-1.595Z"/></svg>
-                    <svg class="correctIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="#26D782" d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-1.875 15.105L25.3 15.41a1.25 1.25 0 0 1 1.915 1.593l-.145.174-8.06 8.08a1.25 1.25 0 0 1-1.595.148l-.175-.145-4.375-4.375a1.25 1.25 0 0 1 1.595-1.913l.175.143 3.49 3.49Z"/></svg>
+                    <div class="answerAndIconsContainer">
+                        <p class="quizzSection__buttonsContainer__button__answerText quizzOption optionB">3 : 1</p>
+                        <svg class="incorrectIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            fill="none" viewBox="0 0 40 40">
+                            <path fill="#EE5454"
+                                d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-5.402 7.415.142-.175a1.25 1.25 0 0 1 1.595-.143l.175.143L20 18.233l3.49-3.493a1.25 1.25 0 0 1 1.595-.143l.175.143a1.25 1.25 0 0 1 .142 1.595l-.142.175L21.767 20l3.493 3.49a1.25 1.25 0 0 1 .142 1.595l-.142.175a1.25 1.25 0 0 1-1.595.142l-.175-.142L20 21.767l-3.49 3.493a1.25 1.25 0 0 1-1.595.142l-.175-.142a1.25 1.25 0 0 1-.143-1.595l.143-.175L18.233 20l-3.493-3.49a1.25 1.25 0 0 1-.143-1.595Z" />
+                        </svg>
+                        <svg class="correctIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            fill="none" viewBox="0 0 40 40">
+                            <path fill="#26D782"
+                                d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-1.875 15.105L25.3 15.41a1.25 1.25 0 0 1 1.915 1.593l-.145.174-8.06 8.08a1.25 1.25 0 0 1-1.595.148l-.175-.145-4.375-4.375a1.25 1.25 0 0 1 1.595-1.913l.175.143 3.49 3.49Z" />
+                        </svg>
+                    </div>
+
                 </button>
 
                 <button class="quizzSection__buttonsContainer__button">
-                    <input type="radio" name="option" id="optionC" class="input">
                     <div class="quizzSection__buttonsContainer__button__answerOption__container">
                         <p class="quizzSection__buttonsContainer__button__answerOption__option">C</p>
                     </div>
-                    <p class="quizzSection__buttonsContainer__button__answerText quizzOption optionC">2.5 : 1</p>
-                    <svg class="incorrectIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="#EE5454" d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-5.402 7.415.142-.175a1.25 1.25 0 0 1 1.595-.143l.175.143L20 18.233l3.49-3.493a1.25 1.25 0 0 1 1.595-.143l.175.143a1.25 1.25 0 0 1 .142 1.595l-.142.175L21.767 20l3.493 3.49a1.25 1.25 0 0 1 .142 1.595l-.142.175a1.25 1.25 0 0 1-1.595.142l-.175-.142L20 21.767l-3.49 3.493a1.25 1.25 0 0 1-1.595.142l-.175-.142a1.25 1.25 0 0 1-.143-1.595l.143-.175L18.233 20l-3.493-3.49a1.25 1.25 0 0 1-.143-1.595Z"/></svg>
-                    <svg class="correctIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="#26D782" d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-1.875 15.105L25.3 15.41a1.25 1.25 0 0 1 1.915 1.593l-.145.174-8.06 8.08a1.25 1.25 0 0 1-1.595.148l-.175-.145-4.375-4.375a1.25 1.25 0 0 1 1.595-1.913l.175.143 3.49 3.49Z"/></svg>
+                    <div class="answerAndIconsContainer">
+                        <p class="quizzSection__buttonsContainer__button__answerText quizzOption optionC">2.5 : 1</p>
+                        <svg class="incorrectIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            fill="none" viewBox="0 0 40 40">
+                            <path fill="#EE5454"
+                                d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-5.402 7.415.142-.175a1.25 1.25 0 0 1 1.595-.143l.175.143L20 18.233l3.49-3.493a1.25 1.25 0 0 1 1.595-.143l.175.143a1.25 1.25 0 0 1 .142 1.595l-.142.175L21.767 20l3.493 3.49a1.25 1.25 0 0 1 .142 1.595l-.142.175a1.25 1.25 0 0 1-1.595.142l-.175-.142L20 21.767l-3.49 3.493a1.25 1.25 0 0 1-1.595.142l-.175-.142a1.25 1.25 0 0 1-.143-1.595l.143-.175L18.233 20l-3.493-3.49a1.25 1.25 0 0 1-.143-1.595Z" />
+                        </svg>
+                        <svg class="correctIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            fill="none" viewBox="0 0 40 40">
+                            <path fill="#26D782"
+                                d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-1.875 15.105L25.3 15.41a1.25 1.25 0 0 1 1.915 1.593l-.145.174-8.06 8.08a1.25 1.25 0 0 1-1.595.148l-.175-.145-4.375-4.375a1.25 1.25 0 0 1 1.595-1.913l.175.143 3.49 3.49Z" />
+                        </svg>
+                    </div>
+
                 </button>
 
                 <button for="optionD" class="quizzSection__buttonsContainer__button">
-                    <input type="radio" name="option" id="optionD" class="input">
                     <div class="quizzSection__buttonsContainer__button__answerOption__container">
                         <p class="quizzSection__buttonsContainer__button__answerOption__option">D</p>
                     </div>
-                    <p class="quizzSection__buttonsContainer__button__answerText quizzOption optionD">5 : 1</p>
-                    <svg class="incorrectIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="#EE5454" d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-5.402 7.415.142-.175a1.25 1.25 0 0 1 1.595-.143l.175.143L20 18.233l3.49-3.493a1.25 1.25 0 0 1 1.595-.143l.175.143a1.25 1.25 0 0 1 .142 1.595l-.142.175L21.767 20l3.493 3.49a1.25 1.25 0 0 1 .142 1.595l-.142.175a1.25 1.25 0 0 1-1.595.142l-.175-.142L20 21.767l-3.49 3.493a1.25 1.25 0 0 1-1.595.142l-.175-.142a1.25 1.25 0 0 1-.143-1.595l.143-.175L18.233 20l-3.493-3.49a1.25 1.25 0 0 1-.143-1.595Z"/></svg>
-                    <svg class="correctIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="#26D782" d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-1.875 15.105L25.3 15.41a1.25 1.25 0 0 1 1.915 1.593l-.145.174-8.06 8.08a1.25 1.25 0 0 1-1.595.148l-.175-.145-4.375-4.375a1.25 1.25 0 0 1 1.595-1.913l.175.143 3.49 3.49Z"/></svg>
+                    <div class="answerAndIconsContainer">
+                        <p class="quizzSection__buttonsContainer__button__answerText quizzOption optionD">5 : 1</p>
+                        <svg class="incorrectIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            fill="none" viewBox="0 0 40 40">
+                            <path fill="#EE5454"
+                                d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-5.402 7.415.142-.175a1.25 1.25 0 0 1 1.595-.143l.175.143L20 18.233l3.49-3.493a1.25 1.25 0 0 1 1.595-.143l.175.143a1.25 1.25 0 0 1 .142 1.595l-.142.175L21.767 20l3.493 3.49a1.25 1.25 0 0 1 .142 1.595l-.142.175a1.25 1.25 0 0 1-1.595.142l-.175-.142L20 21.767l-3.49 3.493a1.25 1.25 0 0 1-1.595.142l-.175-.142a1.25 1.25 0 0 1-.143-1.595l.143-.175L18.233 20l-3.493-3.49a1.25 1.25 0 0 1-.143-1.595Z" />
+                        </svg>
+                        <svg class="correctIcon hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            fill="none" viewBox="0 0 40 40">
+                            <path fill="#26D782"
+                                d="M20 5a15 15 0 1 1 0 30 15 15 0 0 1 0-30Zm0 2.5a12.5 12.5 0 1 0 0 25 12.5 12.5 0 0 0 0-25Zm-1.875 15.105L25.3 15.41a1.25 1.25 0 0 1 1.915 1.593l-.145.174-8.06 8.08a1.25 1.25 0 0 1-1.595.148l-.175-.145-4.375-4.375a1.25 1.25 0 0 1 1.595-1.913l.175.143 3.49 3.49Z" />
+                        </svg>
+                    </div>
+
                 </button>
 
                 <button type="submit" class="quizzSection__buttonsContainer__submitButton">Submit Answer</button>
@@ -204,7 +245,7 @@
             <div class="scoreSection__texts">
                 <h2 class="scoreSection__texts__primaryText">Quiz completed</h2>
                 <h3 class="scoreSection__texts__secondaryText">You scored...</h3>
-            </div>  
+            </div>
 
 
             <div class="scoreSection__scoreContainer">
@@ -212,7 +253,8 @@
                 <div class="scoreSection__scoreContainer__scoreItems">
                     <div class="scoreSection__scoreContainer__scoreItems__quizzInfo">
                         <div class="scoreSection__scoreContainer__scoreItems__quizzInfo__iconContainer">
-                            <img class="scoreSection__scoreContainer__scoreItems__quizzInfo__img" src="" alt="Quizz Icon">
+                            <img class="scoreSection__scoreContainer__scoreItems__quizzInfo__img" src=""
+                                alt="Quizz Icon">
                         </div>
                         <h2 class="scoreSection__scoreContainer__scoreItems__quizzInfo__text"></h2>
 

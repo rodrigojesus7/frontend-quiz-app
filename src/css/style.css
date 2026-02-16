@@ -130,7 +130,7 @@
     --wrong-answer-color: #EE5454;
 
     --main-button-color: #A729F5;
-    --main-button-color-hover: #F6E7FF;
+    --main-button-color-not-selected: #d393fa;
     --main-button-text-color: #FFFFFF;
 
     --error-color: #EE5454;
@@ -403,9 +403,6 @@ main {
     gap: 1.6rem;
 }
 
-input[type="radio"] {
-    display: none;
-}
 
 
 
@@ -848,4 +845,24 @@ input[type="radio"] {
 .correctAnswerContainer {
     background-color: var(--right-answer-color);
     color: white;
+}
+
+.incorrectIcon, .correctIcon{
+    width: 2.4rem;
+    height: 2.4rem;
+
+    flex-shrink: 0;
+}
+
+
+.answerAndIconsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+}
+
+.notSelected{
+    background-color: var(--main-button-color-not-selected);
 }

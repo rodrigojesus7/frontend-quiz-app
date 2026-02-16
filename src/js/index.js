@@ -22,7 +22,6 @@ let headerSectionImg = document.querySelector('.header__titleContainer__iconCont
 
 let question = document.querySelector('.quizzSection__questionSection__question')
 let options = document.querySelectorAll('.quizzSection__buttonsContainer__button')
-let inputs = document.querySelectorAll('.input')
 let answers = document.querySelectorAll('.quizzOption')
 let questionIndex = document.querySelector('.quizzSection__questionSection__questionIndex__currentIndex')
 let progress = document.querySelector('.quizzSection__questionSection__questionProgress')
@@ -50,6 +49,8 @@ let questionCounter = 0
 let correctAnswer = ''
 let selectedAnswerIndex = null
 let isAnswerSubmitted = false
+
+let selectErrorWarning = document.querySelector('.quizzSection__buttonsContainer__submitButton__errorContainer')
 
 let score = 0
 let finalScore = document.querySelector('.scoreSection__scoreContainer__scoreItems__finalScore')
@@ -92,11 +93,23 @@ options.forEach((option, selectedAnswer) => {
 
     option.addEventListener('click', function () {
 
-        // options[selectedAnswer].classList.add('selectedAnswer')
-        console.log(`A alternativa escolhida é: ${selectedAnswer + 1}`)
         selectedAnswerIndex = selectedAnswer
 
+        submitButton.classList.remove('notSelected')
 
+        selectErrorWarning.classList.add('hidden')
+
+        options.forEach(option => {
+            option.classList.remove('quizzSection__buttonsContainer__button--selected')
+        })
+
+        optionsContainer.forEach(container => {
+            container.classList.remove('quizzSection__buttonsContainer__button__answerOption__container--selected')
+        })
+
+        optionsContainer[selectedAnswer].classList.add('quizzSection__buttonsContainer__button__answerOption__container--selected')
+
+        option.classList.add('quizzSection__buttonsContainer__button--selected')
     })
 })
 
@@ -124,17 +137,17 @@ buttons.forEach((button, index) => {
 
             case 2:
                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--javascript')
-
                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--javascript')
                 break
 
 
             case 3:
                 headerSectionSvgIconContainer.classList.add('header__titleContainer__iconContainer--accessibility')
-
                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--accessibility')
                 break
         }
+
+        submitButton.classList.add('notSelected')
 
         headerSectionTitle.classList.remove('invisible')
 
@@ -155,6 +168,8 @@ buttons.forEach((button, index) => {
 
 
 function loadQuestions() {
+
+    submitButton.classList.add('notSelected')
 
     const currentQuestion = data.quizzes[questionSectionCounter].questions[questionCounter]
 
@@ -185,6 +200,7 @@ submitButton.addEventListener('click', function () {
     if (!isAnswerSubmitted) {
 
         if (selectedAnswerIndex === null) {
+            selectErrorWarning.classList.remove('hidden')
             return
         }
 
@@ -206,15 +222,23 @@ submitButton.addEventListener('click', function () {
 
 function showIncorrectAnswer() {
     options[selectedAnswerIndex].classList.add('quizzSection__buttonsContainer__button--wrongAnswer')
+    options[selectedAnswerIndex].classList.remove('quizzSection__buttonsContainer__button--selected')
+
     optionsContainer[selectedAnswerIndex].classList.add('quizzSection__buttonsContainer__button__answerOption__container--wrongAnswer')
+    optionsContainer[selectedAnswerIndex].classList.remove('quizzSection__buttonsContainer__button__answerOption__container--selected')
 
     incorrectIcons[selectedAnswerIndex].classList.remove('hidden')
     correctIcons[correctAnswerIndex].classList.remove('hidden')
 }
 
-function showCorrectAnswer(){
+function showCorrectAnswer() {
     options[correctAnswerIndex].classList.add('correctAnswer')
+    options[correctAnswerIndex].classList.remove('quizzSection__buttonsContainer__button--selected')
+
     correctIcons[correctAnswerIndex].classList.remove('hidden')
+
+    optionsContainer[correctAnswerIndex].classList.add('correctAnswerContainer')
+    optionsContainer[correctAnswerIndex].classList.remove('quizzSection__buttonsContainer__button__answerOption__container--selected')
 }
 
 function goToNextQuestion() {
@@ -241,11 +265,13 @@ function clearAnswers() {
     options.forEach(option => {
         option.classList.remove('quizzSection__buttonsContainer__button--wrongAnswer')
         option.classList.remove('correctAnswer')
+        option.classList.remove('quizzSection__buttonsContainer__button--selected')
     })
 
     optionsContainer.forEach(container => {
         container.classList.remove('quizzSection__buttonsContainer__button__answerOption__container--wrongAnswer')
         container.classList.remove('correctAnswerContainer')
+        container.classList.remove('quizzSection__buttonsContainer__button__answerOption__container--selected')
     })
 
     incorrectIcons.forEach(icon => {
@@ -256,6 +282,7 @@ function clearAnswers() {
         icon.classList.add('hidden')
     })
 
+    selectErrorWarning.classList.add('hidden')
 }
 
 
