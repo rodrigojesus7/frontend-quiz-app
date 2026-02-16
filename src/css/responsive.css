@@ -313,6 +313,7 @@
 
     .startMenu__container {
         min-width: 46.5rem;
+        gap: 4.8rem;
     }
 
     .startMenu__buttonsContainer {
