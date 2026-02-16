@@ -205,7 +205,7 @@ body {
 .quizzSection__buttonsContainer__submitButton,
 .quizzSection__buttonsContainer__button__answerOption__container {
     transition:
-        background-color 0.3s ease,
+        background-color 0.4s ease,
         color 0.3s ease,
         box-shadow 0.3s ease,
         border 0.1s ease;
@@ -407,10 +407,7 @@ input[type="radio"] {
     display: none;
 }
 
-input[type="radio"]:checked .quizzSection__buttonsContainer__button {
-    background-color: var(--selected-alternative-border-color);
-    border-color: blue;
-}
+
 
 .startMenu__buttonsContainer__button {
     display: flex;
@@ -563,6 +560,7 @@ input[type="radio"]:checked .quizzSection__buttonsContainer__button {
 
 }
 
+
 .quizzSection__buttonsContainer__button:hover,
 .quizzSection__buttonsContainer__button:focus {
     border: solid 0.3rem var(--selected-alternative-border-color);
@@ -573,6 +571,11 @@ input[type="radio"]:checked .quizzSection__buttonsContainer__button {
 .quizzSection__buttonsContainer__button:focus .quizzSection__buttonsContainer__button__answerOption__container {
     background-color: var(--selected-alternative-option-background);
 }
+
+.quizzSection__buttonsContainer__button--wrongAnswer {
+    border: solid 0.3rem var(--wrong-answer-color);
+}
+
 
 .quizzSection__buttonsContainer__button:hover .quizzSection__buttonsContainer__button__answerOption__container,
 .quizzSection__buttonsContainer__button:focus .quizzSection__buttonsContainer__button__answerOption__container {
@@ -606,6 +609,11 @@ input[type="radio"]:checked .quizzSection__buttonsContainer__button {
     height: 4rem;
 
     border-radius: 0.6rem;
+}
+
+.quizzSection__buttonsContainer__button__answerOption__container--wrongAnswer {
+    background-color: var(--wrong-answer-color);
+    color: white;
 }
 
 .quizzSection__buttonsContainer__button__answerOption__option {
@@ -820,4 +828,24 @@ input[type="radio"]:checked .quizzSection__buttonsContainer__button {
 .invisible {
     opacity: 0;
     pointer-events: none;
+}
+
+
+
+.quizzSection__buttonsContainer__button--selected{
+    border: solid 0.3rem var(--selected-alternative-border-color);
+}
+
+.quizzSection__buttonsContainer__button__answerOption__container--selected {
+    background-color: var(--selected-alternative-option-background);
+    color: white;
+}
+
+.correctAnswer{
+    border: solid 0.3rem var(--right-answer-color);
+}
+
+.correctAnswerContainer {
+    background-color: var(--right-answer-color);
+    color: white;
 }

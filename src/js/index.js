@@ -22,14 +22,19 @@ let headerSectionImg = document.querySelector('.header__titleContainer__iconCont
 
 let question = document.querySelector('.quizzSection__questionSection__question')
 let options = document.querySelectorAll('.quizzSection__buttonsContainer__button')
+let inputs = document.querySelectorAll('.input')
 let answers = document.querySelectorAll('.quizzOption')
 let questionIndex = document.querySelector('.quizzSection__questionSection__questionIndex__currentIndex')
 let progress = document.querySelector('.quizzSection__questionSection__questionProgress')
+let optionsContainer = document.querySelectorAll('.quizzSection__buttonsContainer__button__answerOption__container')
 
 let optionA = document.querySelector('.optionA')
 let optionB = document.querySelector('.optionB')
 let optionC = document.querySelector('.optionC')
 let optionD = document.querySelector('.optionD')
+
+let correctIcons = document.querySelectorAll('.correctIcon')
+let incorrectIcons = document.querySelectorAll('.incorrectIcon')
 
 const submitButton = document.querySelector('.quizzSection__buttonsContainer__submitButton')
 
@@ -43,9 +48,6 @@ async function getData() {
     const file = ('./data.json')
     const response = await fetch(file)
     const data = await response.json()
-    console.log(data)
-    console.log(data.quizzes[0].questions[0])
-    console.log(data.quizzes[0].questions[0].answer)
 
     return data
 }
@@ -76,6 +78,22 @@ themeToggleButton.addEventListener('click', function () {
 })
 
 
+
+
+let selectedAnswerIndex = 0
+let correctAnswerIndex = 0
+
+options.forEach((option, selectedAnswer) => {
+
+    option.addEventListener('click', function () {
+
+        // options[selectedAnswer].classList.add('selectedAnswer')
+        console.log(`A alternativa escolhida é: ${selectedAnswer + 1}`)
+        selectedAnswerIndex = selectedAnswer
+
+
+    })
+})
 
 buttons.forEach(button => {
     button.addEventListener('click', function () {
@@ -120,6 +138,8 @@ buttons.forEach(button => {
                 scoreSectionIconContainer.classList.add('header__titleContainer__iconContainer--accessibility')
             }
 
+            console.log(selectedAnswerIndex)
+
             headerSectionTitleText.textContent = data.quizzes[questionSectionCounter].title
 
             headerSectionImg.src = data.quizzes[questionSectionCounter].icon
@@ -141,14 +161,54 @@ buttons.forEach(button => {
 
             correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
 
+            answers.forEach((answer, answerIndex) => {
+                if (answer.textContent === correctAnswer) {
+                    console.log(`a alternativa correta é a ${answerIndex + 1}, ${correctAnswer}`)
+                    correctAnswerIndex = answerIndex
+                }
+            });
+
             submitButton.addEventListener('click', function () {
 
                 if (questionCounter <= 8) {
                     questionCounter++
+                    console.log(questionCounter)
                 } else {
                     quizzSection.classList.add('hidden')
                     scoreSection.classList.remove('hidden')
                 }
+                
+                // options[correctAnswerIndex].classList.add('correctAnswer')
+
+                // correctIcons[correctAnswerIndex].classList.remove('hidden')
+
+                // optionsContainer[correctAnswerIndex].classList.add('correctAnswerContainer')
+
+
+
+                // for (let option of options) {
+                //     option.classList.remove('quizzSection__buttonsContainer__button--wrongAnswer')
+                // }
+
+                // for (let containers of optionsContainer) {
+                //     containers.classList.remove('quizzSection__buttonsContainer__button__answerOption__container--wrongAnswer')
+                // }
+
+                // for (let containers of optionsContainer) {
+                //     containers.classList.remove('correctAnswerContainer')
+                // }
+
+                // for (let option of options) {
+                //     option.classList.remove('correctAnswer')
+                // }
+
+                // for (let icons of incorrectIcons) {
+                //     icons.classList.add('hidden')
+                // }
+
+                // for (let icons of correctIcons) {
+                //     icons.classList.add('hidden')
+                // }
 
                 question.textContent = data.quizzes[questionSectionCounter].questions[questionCounter].question
 
@@ -161,16 +221,23 @@ buttons.forEach(button => {
                 correctAnswer = data.quizzes[questionSectionCounter].questions[questionCounter].answer
                 questionIndex.textContent = questionCounter + 1
                 progress.value = questionCounter + 1
+
+
+
+                console.log(selectedAnswerIndex)
+
+
+
+
+                answers.forEach((answer, answerIndex) => {
+                    if (answer.textContent === correctAnswer) {
+                        console.log(`a alternativa correta é a ${answerIndex + 1}, ${correctAnswer}`)
+                        correctAnswerIndex = answerIndex
+                    }
+                });
+
             })
 
-
-
-
-            answers.forEach(answer => {
-                if (answer.textContent === correctAnswer) {
-                    answer.classList.add('CorrectAnswer')
-                }
-            });
 
         })
 
@@ -184,3 +251,4 @@ playAgainButton.addEventListener('click', function () {
     window.location.reload()
 
 })
+
