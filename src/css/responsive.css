@@ -272,6 +272,21 @@
         width: 4rem;
         height: 4rem;
     }
+
+    .quizzSection__buttonsContainer__submitButton__errorContainer__errorText {
+        font-size: var(--preset-5-font-size);
+        font-weight: var(--preset-5-font-weight);
+        letter-spacing: var(--preset-5-letter-spacing);
+        line-height: var(--preset-5-line-height);
+    
+        color: var(--error-color);
+    }
+
+    .quizzSection__buttonsContainer__submitButton__errorContainer svg{
+        width: 4rem;
+        height: 4rem;
+    }
+    
 }
 
 
